@@ -13,12 +13,12 @@ def get_access_token(ak,sk):
     request.add_header('Content-Type', 'application/json; charset=UTF-8')
     response = urllib.request.urlopen(request)
     content = response.read().decode('utf-8')
-    j=json.loads(content)
+    j = json.loads(content)
     if (j['access_token']):
-        return  j['access_token']
+        return j['access_token']
     else:
         return ""
-
+# 将数组中的字典分解 生成每行文字
 def getstr(dicts):
     list1 = dicts['words_result']
     list2 = []
